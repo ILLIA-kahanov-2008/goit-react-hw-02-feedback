@@ -1,0 +1,49 @@
+.App {
+  width: 80%;
+  max-width: 500px;
+  margin: 10px auto 0;
+  padding: 15px;
+  border: 2px solid black;
+}
+
+.feedbackOptions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: burlywood;
+  width: 100px;
+  line-height: 2;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.button:hover,
+.button:focus {
+  background-color: lightgrey;
+}
+.button[name="good"]:hover,
+.button[name="good"]:focus {
+  color: green;
+}
+
+.button[name="bad"]:hover,
+.button[name="bad"]:focus {
+  color: red;
+}
+
+.section {
+  border: 1px solid #a3a1a1;
+  text-align: center;
+  box-shadow: lightgrey 1px 4px;
+  padding: 10px 0;
+}
+
+.section + .section {
+  margin-top: 20px;
+}

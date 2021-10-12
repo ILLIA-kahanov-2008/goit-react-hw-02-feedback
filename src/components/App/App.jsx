@@ -1,8 +1,8 @@
 import { Component } from "react";
 
-import { Section } from "./components/Section/Section";
-import {FeedbackOptions} from "./components/FeedbackOptions/FeedbackOptions";
-import { Statistics } from "./components/Statistics/Statistics";
+import { Section } from "../Section/Section";
+import { FeedbackOptions } from "../FeedbackOptions/FeedbackOptions";
+import { Statistics } from "../Statistics/Statistics";
 // import { Notification } from "./components/Notification/Notification";
 
 import "./App.css";
@@ -21,7 +21,7 @@ class App extends Component {
     }));
   };
 
-  countTotalFeedback() {    
+  countTotalFeedback() {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
   }
@@ -32,7 +32,7 @@ class App extends Component {
     return Math.round((good / totalFeedback) * 100);
   }
 
-  render() {  
+  render() {
     const { good, neutral, bad } = this.state;
     return (
       <div className="App">
@@ -42,14 +42,15 @@ class App extends Component {
             onLeaveFeedback={this.handleClick}
           />
         </Section>
-        <Section title="Statistics">          
+        <Section title="Statistics">
           <Statistics
+            className="statistics"
             good={good}
             neutral={neutral}
             bad={bad}
             total={this.countTotalFeedback()}
             positivePercentage={this.countPositiveFeedbackPercentage()}
-          />          
+          />
         </Section>
       </div>
     );

@@ -1,0 +1,35 @@
+.statsList {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.statsItem {
+  list-style: none;
+  display: flex;
+  border-bottom: 2px solid black;
+  font-weight: 900;
+}
+
+.statsItem:first-child {
+  background-color: green;
+}
+
+.statsItem:nth-child(2n),
+.statsItem:nth-child(4n) {
+  background-color: lightgrey;
+}
+
+.statsItem:nth-child(3n) {
+  background-color: red;
+}
+
+.statsItem:last-child {
+  background-color: greenyellow;
+}
+
+.statsItem span {
+  display: block;
+  flex-basis: 50%;
+}
